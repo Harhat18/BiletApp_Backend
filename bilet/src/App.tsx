@@ -4,10 +4,12 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
-import ProductDetail from './src/pages/product/ProductDetail';
-import Profile from './src/pages/setting/Profile';
-import ProfileEdit from './src/pages/setting/ProfileEdit';
-import Product from './src/pages/product/Product';
+import ProductDetail from './pages/product/ProductDetail';
+import Profile from './pages/setting/Profile';
+import ProfileEdit from './pages/setting/ProfileEdit';
+import Product from './pages/product/Product';
+
+import ProductProvider from './context/ProductProvider/ProductProvider';
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -50,18 +52,20 @@ const ProfileStack = () => {
 
 const App = () => {
   return (
-    <NavigationContainer>
-      <Tab.Navigator>
-        <Tab.Screen
-          name="Member"
-          component={ProductStack}
-          options={{
-            headerShown: false,
-          }}
-        />
-        <Tab.Screen name="Profile" component={ProfileStack} />
-      </Tab.Navigator>
-    </NavigationContainer>
+    <ProductProvider>
+      <NavigationContainer>
+        <Tab.Navigator>
+          <Tab.Screen
+            name="Member"
+            component={ProductStack}
+            options={{
+              headerShown: false,
+            }}
+          />
+          <Tab.Screen name="Profile" component={ProfileStack} />
+        </Tab.Navigator>
+      </NavigationContainer>
+    </ProductProvider>
   );
 };
 
