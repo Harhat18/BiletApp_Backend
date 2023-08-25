@@ -18,7 +18,7 @@ const ProductStack = () => {
         name="ProductScreen"
         component={Product}
         options={{
-          title: 'Bilet',
+          title: 'BİLET',
           headerStyle: {backgroundColor: '#2f4f4f'},
           headerTitleStyle: {color: '#fff', fontSize: 20},
           headerTitleAlign: 'center',
@@ -29,7 +29,7 @@ const ProductStack = () => {
         name="ProductDetailScreen"
         component={ProductDetail}
         options={{
-          title: 'Bilet',
+          title: 'BİLET',
           headerStyle: {backgroundColor: '#2f4f4f'},
           headerTitleStyle: {color: '#fff', fontSize: 20},
           headerTitleAlign: 'center',
