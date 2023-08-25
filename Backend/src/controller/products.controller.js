@@ -32,11 +32,13 @@ export const postProduct = async (req, res) => {
 
 export const deleteProduct = async (req, res) => {
   try {
-    const deletedProduct = await Point.findByIdAndDelete(req.params.id);
+    const deletedProduct = await Product.findByIdAndDelete(req.params.id);
     if (!deletedProduct) {
       return res.status(404).json({ message: "Product not found" });
     }
-    res.status(200).json({ message: "Product deleted", point: deletedProduct });
+    res
+      .status(200)
+      .json({ message: "Product deleted", product: deletedProduct });
   } catch (error) {
     res
       .status(500)

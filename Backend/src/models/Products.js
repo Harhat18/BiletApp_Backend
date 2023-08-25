@@ -10,9 +10,4 @@ const PoductSchema = new mongoose.Schema({
   map: { type: Object },
 });
 
-PoductSchema.pre("save", function (next) {
-  this.datetime.setHours(this.datetime.getHours() + 3);
-  next();
-});
-
 export const Product = mongoose.model("Product", PoductSchema);
