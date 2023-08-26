@@ -56,7 +56,7 @@ const App = () => {
       <NavigationContainer>
         <Tab.Navigator>
           <Tab.Screen
-            name="Member"
+            name="Product"
             component={ProductStack}
             options={{
               headerShown: false,
