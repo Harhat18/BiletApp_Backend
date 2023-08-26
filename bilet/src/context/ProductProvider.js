@@ -1,8 +1,8 @@
 import React from 'react';
 import {Provider} from 'react-redux';
 import {legacy_createStore as createStore} from 'redux';
-import reducers from './reducers';
-import initialState from './store';
+import reducers from './ProductProvider/reducers';
+import initialState from './ProductProvider/store';
 
 const UserProvider = ({children}) => {
   const store = createStore(reducers, initialState);

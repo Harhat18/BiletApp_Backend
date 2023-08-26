@@ -9,7 +9,7 @@ import Profile from './pages/setting/Profile';
 import ProfileEdit from './pages/setting/ProfileEdit';
 import Product from './pages/product/Product';
 
-import ProductProvider from './context/ProductProvider/ProductProvider';
+import ProductProvider from './context/ProductProvider';
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
