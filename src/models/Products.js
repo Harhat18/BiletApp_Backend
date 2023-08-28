@@ -1,13 +1,11 @@
 import mongoose from "mongoose";
 const PoductSchema = new mongoose.Schema({
-  name: { type: String, required: true },
-  category: { type: String, required: true },
+  title: { type: String, required: true },
+  category: { type: String },
   description: { type: String, required: true },
   adress: { type: String, required: true },
-  startDate: { type: String, required: true },
-  endDate: { type: String, required: true },
-  images: { type: Object },
-  map: { type: Object },
+  date: { type: String, required: true },
+  image: { type: String },
 });
 
 export const Product = mongoose.model("Product", PoductSchema);
