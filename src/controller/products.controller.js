@@ -18,15 +18,27 @@ export const getProduct = async (req, res) => {
   }
 };
 export const postProduct = async (req, res) => {
-  const { title, category, description, adress, date, image, price } = req.body;
+  const {
+    title,
+    category,
+    description,
+    adress,
+    location,
+    date,
+    image,
+    price,
+    place,
+  } = req.body;
   const product = new Product({
     title,
     category,
     description,
     adress,
+    location,
     date,
     image,
     price,
+    place,
   });
   await product.save();
   res.status(201).json(product);

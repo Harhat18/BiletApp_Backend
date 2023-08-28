@@ -5,8 +5,10 @@ const PoductSchema = new mongoose.Schema({
   description: { type: String, required: true },
   price: { type: String, required: true },
   adress: { type: String, required: true },
+  place: { type: String, required: true },
   date: { type: String, required: true },
-  image: { type: String },
+  image: { type: String, required: true },
+  location: { type: Array, required: true },
 });
 
 export const Product = mongoose.model("Product", PoductSchema);
