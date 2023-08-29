@@ -8,7 +8,8 @@ const PoductSchema = new mongoose.Schema({
   place: { type: String, required: true },
   date: { type: String, required: true },
   image: { type: String, required: true },
-  location: { type: Array, required: true },
+  lat: { type: String },
+  lng: { type: String },
 });
 
 export const Product = mongoose.model("Product", PoductSchema);

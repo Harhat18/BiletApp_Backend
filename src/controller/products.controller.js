@@ -28,6 +28,8 @@ export const postProduct = async (req, res) => {
     image,
     price,
     place,
+    lat,
+    lng,
   } = req.body;
   const product = new Product({
     title,
@@ -39,6 +41,8 @@ export const postProduct = async (req, res) => {
     image,
     price,
     place,
+    lat,
+    lng,
   });
   await product.save();
   res.status(201).json(product);
