@@ -25,11 +25,13 @@ export const postProduct = async (req, res) => {
     adress,
     location,
     date,
-    image,
+    endDate,
+    images,
     price,
     place,
     lat,
     lng,
+    categoryPrice,
   } = req.body;
   const product = new Product({
     title,
@@ -38,11 +40,14 @@ export const postProduct = async (req, res) => {
     adress,
     location,
     date,
-    image,
+    endDate,
+    images,
     price,
     place,
     lat,
     lng,
+    location,
+    categoryPrice,
   });
   await product.save();
   res.status(201).json(product);

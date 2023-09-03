@@ -4,7 +4,7 @@ import cors from "cors";
 import morgan from "morgan";
 import { DB } from "./src/models/dbConnect.js";
 import Products from "./src/routers/Products.routes.js";
-
+import Popular from "./src/routers/Popular.routes.js";
 const app = express();
 dotenv.config();
 DB();
@@ -14,6 +14,7 @@ app.use(morgan("dev"));
 app.use(cors());
 
 app.use("/api/products", Products);
+app.use("/api/popular", Popular);
 
 const port = process.env.PORT || 4000;
 
