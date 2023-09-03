@@ -12,12 +12,6 @@ const PoductSchema = new mongoose.Schema(
     images: [],
     lat: { type: String },
     lng: { type: String },
-    location: {
-      type: {
-        lat: { type: Number },
-        lng: { type: Number },
-      },
-    },
     categoryPrice: {
       type: [
         {
